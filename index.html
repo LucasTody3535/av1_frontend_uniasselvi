@@ -3,10 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./css/login.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
   </head>
   <body>
-    Works
+    <form action="./pages/home.html" method="get">
+		<span id="login-title">Bem vindo!</span>
+		<div class="form-input">
+			<label for="name">Nome</label>
+			<input name="name"/>
+		</div>
+		<div class="form-input">
+			<label for="password">Senha</label>
+			<input type="password" name="password"/>
+		</div>
+		<input class="form-btn" type="reset" value="Limpar" />
+		<input class="form-btn" type="submit" value="Entrar" />
+    </form>
   </body>
 </html>
