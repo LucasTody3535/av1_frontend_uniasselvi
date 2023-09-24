@@ -13,6 +13,7 @@ nav {
 	position: absolute;
 	left: -90vw;
 	top: 0;
+	z-index: 999;
 	transition: all ease-in-out .5s;
 }
 
@@ -67,7 +68,7 @@ nav a {
 	left: -100vw;
 	top: 0;
 	background-color: rgba(0, 0, 0, .4);
-	z-index: -1;
+	z-index: 99;
 }
 
 #menu #trigger:checked + nav {
@@ -95,7 +96,7 @@ nav a {
 		width: 100px;
 		height: 40px;
 		line-height: 40px;
-		font-size: 10px;
+		font-size: 15px;
 		display: inline;
 		transition: all ease-in-out .2s;
 	}
@@ -111,6 +112,6 @@ nav a {
 		width: 200px;
 		margin-right: auto;
 		line-height: 40px;
-		font-size: 15px;
+		font-size: 18px;
 	}
 }
