@@ -1,0 +1,116 @@
+body {
+	position: relative;
+	max-height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	height: 100vh;
+	width: 90vw;
+	background-color: rgba(72, 151, 217, 1);
+	position: absolute;
+	left: -90vw;
+	top: 0;
+	transition: all ease-in-out .5s;
+}
+
+nav p {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	margin: 0;
+	font-size: 20px;
+}
+
+nav p span {
+	color: white;
+	text-decoration: underline;
+}
+
+nav a {
+	display: block;
+	height: 50px;
+	font-size: 15px;
+	line-height: 50px;
+	text-align: center;
+	color: background-color: rgba(0, 0, 0, .4);
+}
+
+#menu #mobile-menu-switch {
+	display: block;
+	width: calc(100vw - 10px);
+	padding: 5px;
+	background-color: rgba(72, 151, 217, 1);
+}
+
+#menu #mobile-menu-switch label {
+	display: block;
+	width: 30px;
+}
+
+#menu label span {
+	display: block;
+	height: 6px;
+	width: 30px;
+	border-radius: 5px;
+	background-color: black;
+	margin-bottom: 2px;
+}
+
+#menu-closer {
+	display: block;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	left: -100vw;
+	top: 0;
+	background-color: rgba(0, 0, 0, .4);
+	z-index: -1;
+}
+
+#menu #trigger:checked + nav {
+	left: 0 !important;
+}
+
+#menu #trigger:checked + nav + #menu-closer {
+	left: 0 !important;	
+}
+
+@media only screen and (min-width: 667px) {
+	#menu #mobile-menu-switch {
+		display: none;
+	}
+
+	nav {
+		height: 40px;
+		width: 100vw;
+		position: unset;
+		display: flex;
+		justify-content: end;
+	}
+
+	nav a {
+		width: 100px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 10px;
+		display: inline;
+		transition: all ease-in-out .2s;
+	}
+
+	nav a:hover {
+		background-color: white;
+		color: rgba(72, 151, 217, 1);
+		cursor: pointer;
+	}
+
+	nav p {
+		height: 40px;
+		width: 200px;
+		margin-right: auto;
+		line-height: 40px;
+		font-size: 15px;
+	}
+}
