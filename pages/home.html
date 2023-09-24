@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/list.filters.css" />
+    <title>Home Page</title>
+    <style>    
+		#table-corpse {
+			height: calc(100vh - 164px);
+			overflow: scroll;
+			position: relative;
+		}
+    
+		table {
+			border-left: 1px solid black;
+			border-right: 1px solid black;
+			width: 98vw;
+			margin: 0 auto;
+			padding: 0;
+			/* border-collapse: collapse; */
+			table-layout: fixed;
+			border-spacing: 0;
+		}
+
+		table a {
+			color: rgba(72, 151, 217, 1);
+			text-decoration: none;
+		}
+
+		thead {
+			position: sticky;
+			top: 0;
+			left: 0;
+			background-color: white;
+		}
+
+		tfoot {
+			position: sticky;
+			bottom: 0;
+			left: 0;
+			background-color: white;
+		}
+		
+		tr td:last-child {
+			border-right: none;
+		}
+
+		tr td:nth-child(2),
+		tr td:nth-child(3),
+		tr td:nth-child(4) {
+			width: 90px;
+		}
+
+		tr td:last-child a {
+			text-decoration: none;
+		}
+
+		tr td {
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			border-right: 1px solid black;
+			border-bottom: 1px solid black;
+		}
+
+		tr td p {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			width: 95%;
+			text-align: left;
+			text-indent: 5px;
+		}
+
+		thead tr td,
+		tfoot tr td {
+			border-top: 1px solid black;
+		}
+
+		tfoot tr:last-of-type a {
+			width: 100%;
+			border: none;
+			height: 30px;
+			color: rgba(72, 151, 217, 1);
+			font-size: 20px;
+			background-color: white;
+		}
+
+		tbody tr:last-of-type td {
+			border-bottom: none;
+		}
+
+		@media only screen and (min-width: 667px) {
+			#table-corpse {
+				height: calc(100vh - 90px) !important;
+			}
+
+			tr td:nth-child(2),
+			tr td:nth-child(3),
+			tr td:nth-child(4) {
+				width: unset;
+			}
+		}
+    </style>
+  </head>
+  <body>
+	<div id="menu">
+		<div id="mobile-menu-switch">
+			<label for="trigger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+		</div>
+		<input hidden type="checkbox" id="trigger" />
+	  	<nav>
+	  		<p>Você está em: <span>Home</span></p>
+			<a>Voltar</a>
+			<a>Sair</a>
+	  	</nav>
+	  	<label for="trigger" id="menu-closer"></label>
+	</div>
+	<div id="table-filters">
+		<span id="filter">
+			Nome do Cliente: <input type="text" />
+		</span>
+		<span id="filter">
+			N° de Pedidos: <select>
+				<option value="-1">N/A</option>
+				<option value="5" select="true">< 5</option>
+				<option value="10">< 10</option>
+				<option value="15">< 15</option>
+			</select>
+		</span>
+		<button>Aplicar</button>
+	</div>
+	<div id="table-corpse">
+		<table>
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>Nome</td>
+					<td>N° Pedidos</td>
+					<td>Fidelidade</td>
+					<td></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>0001</td>
+					<td>
+						<p>Carlos Eduardo</p>
+					</td>
+					<td>
+						<p>50.000</p>
+					</td>
+					<td>
+						<p>13 anos</p>
+					</td>
+					<td>
+						<a href="./details.html">Info</a>
+					</td>
+				</tr>
+				<tr>
+					<td>0001</td>
+					<td>
+						<p>Carlos Eduardo</p>
+					</td>
+					<td>
+						<p>50.000</p>
+					</td>
+					<td>
+						<p>13 anos</p>
+					</td>
+					<td>
+						<a href="./details.html">Info</a>
+					</td>
+				</tr>
+				<tr>
+					<td>0001</td>
+					<td>
+						<p>Carlos Eduardo</p>
+					</td>
+					<td>
+						<p>50.000</p>
+					</td>
+					<td>
+						<p>13 anos</p>
+					</td>
+					<td>
+						<a href="./details.html">Info</a>
+					</td>
+				</tr>
+				<tr>
+					<td>0001</td>
+					<td>
+						<p>Carlos Eduardo</p>
+					</td>
+					<td>
+						<p>50.000</p>
+					</td>
+					<td>
+						<p>13 anos</p>
+					</td>
+					<td>
+						<a href="./details.html">Info</a>
+					</td>
+				</tr>
+				<tr>
+					<td>0001</td>
+					<td>
+						<p>Carlos Eduardo</p>
+					</td>
+					<td>
+						<p>50.000</p>
+					</td>
+					<td>
+						<p>13 anos</p>
+					</td>
+					<td>
+						<a href="./details.html">Info</a>
+					</td>
+				</tr>
+				<tr>
+					<td>0001</td>
+					<td>
+						<p>Carlos Eduardo</p>
+					</td>
+					<td>
+						<p>50.000</p>
+					</td>
+					<td>
+						<p>13 anos</p>
+					</td>
+					<td>
+						<a href="./details.html">Info</a>
+					</td>
+				</tr>
+				<tr>
+					<td>0001</td>
+					<td>
+						<p>Carlos Eduardo</p>
+					</td>
+					<td>
+						<p>50.000</p>
+					</td>
+					<td>
+						<p>13 anos</p>
+					</td>
+					<td>
+						<a href="./details.html">Info</a>
+					</td>
+				</tr>
+				<tr>
+					<td>0001</td>
+					<td>
+						<p>Carlos Eduardo</p>
+					</td>
+					<td>
+						<p>50.000</p>
+					</td>
+					<td>
+						<p>13 anos</p>
+					</td>
+					<td>
+						<a href="./details.html">Info</a>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="5">
+						<a href="./registration.html">+</a>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+  </body>
+</html>
