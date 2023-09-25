@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <title>Registration Page</title>
+    <style>
+		input:invalid {
+			background-color: rgba(209, 23, 32, 1) !important;
+		}
+
+		form {
+			width: 100vw;
+			height: calc(100vh - 34px);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		form #title {
+			margin-top: 50px;
+			margin-bottom: auto;
+			background-color: white;
+			font-size: 25px;
+			font-weight: bold;
+		}
+
+		form #form-fields {
+			margin-top: 0px;
+			margin-bottom: auto;
+		}
+
+		form #form-fields .form-input {
+			width: 300px;
+		}
+
+		form #form-fields .form-input label {
+			display: block;
+			font-size: 20px;
+			margin-bottom: 10px;
+			margin-top: 15px;
+		}
+
+		form #form-fields .form-input input,
+		form #form-fields .form-input select {
+			height: 40px;
+			width: 100%;
+			box-sizing: border-box;
+			border-radius: 5px;
+			border: 1px solid rgba(72, 151, 217, 1);
+			background-color: white;
+		}
+
+		form .form-btn {
+			margin-top: 0px;
+			height: 40px;
+			width: 300px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		.form-btn:first-of-type {
+			background-color: white;
+			color: rgba(72, 151, 217, 1);
+			border: 1px solid rgba(72, 151, 217, 1);
+			margin-bottom: 10px;
+		}
+		
+		.form-btn:last-of-type {
+		    background-color: rgba(72, 151, 217, 1);
+		    color: white;
+		    border: 1px solid rgba(72, 151, 217, 1);
+			margin-bottom: 30px;
+		}
+
+		@media only screen
+			and (min-width: 667px)
+			and (max-height: 600px)
+		{
+			form {
+				position: relative;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+
+			form #form-fields {
+				height: 70%;
+				width: 95%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				align-items: center;
+				padding-top: 40px;
+			}
+
+			form #form-fields .form-input:nth-child(3),
+			form #form-fields .form-input:nth-child(4) {
+				margin-bottom: 40px;
+			}
+
+			form #title {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				margin-top: 0;
+				font-size: 20px;
+			}
+
+			.form-btn:first-of-type,
+			.form-btn:last-of-type {
+				margin-bottom: 20px;
+			}
+
+			.form-btn:first-of-type {
+				margin-right: 5px;
+			}
+
+			.form-btn:last-of-type {
+				margin-left: 5px;
+			}
+		}
+
+		@media only screen
+			and (min-height: 451px)
+			and (max-height: 600px)
+		{
+			form #form-fields .form-input:nth-child(3),
+			form #form-fields .form-input:nth-child(4) {
+				margin-bottom: 100px;
+			}
+
+			form #form-fields {
+				margin-top: 20px;
+			}
+
+			.form-btn:first-of-type,
+			.form-btn:last-of-type {
+				position: absolute;
+				bottom: 80px;
+				margin: 0;
+			}
+
+			.form-btn:first-of-type {
+				left: 30px;
+			}
+
+			.form-btn:last-of-type {
+				right: 30px;
+			}
+		}
+
+		@media only screen
+			and (min-width: 667px)
+			and (min-height: 601px)
+		{
+			form #title {
+				margin-top: 20px;
+				margin-bottom: 0;
+			}
+		}
+
+		@media only screen
+			and (min-width: 667px)
+		{
+			form {
+				height: calc(100vh - 40px);
+			}		
+		}
+
+		@media only screen
+			and (min-width: 1000px)
+		{
+			form #form-fields .form-input {
+				width: 500px;
+			}
+			
+			form #form-fields {
+				margin-bottom: 30px;
+			}
+		}
+    </style>
+  </head>
+  <body>
+	<nav id="menu">
+		<div id="mobile">
+			<a class="hidden" href="../index.html">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+			</a>
+			<a href="./home.html">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+			</a>
+			<span>
+				<a href="./home.html">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+				</a>
+				<a class="menu-option-selected" href="./registration.html">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+				</a>
+			</span>
+		</div>
+		<div id="wider">
+			<a class="hidden" href="../index.html">
+				Sair
+			</a>
+			<a href="./home.html">
+				Voltar
+			</a>
+			<span>
+				<a href="./home.html">Home</a>
+				<a class="menu-option-selected" href="./registration.html">Cadastro</a>
+			</span>
+		</div>
+	</nav>
+    <form>
+		<span id="title">Formulário</span>
+		<div id="form-fields">
+			<div class="form-input">
+				<label for="name">Nome</label>
+				<input required value="Cliente" name="name"
+				pattern="[a-zA-Z]{4,10}"
+				placeholder="Deve conter de 4 a 10 letras"/>
+			</div>
+			<div class="form-input">
+				<label for="cpf">CPF/CNPJ</label>
+				<input required value="999.999.999-99" type="text"
+					pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}|[0-9]{2}\.[0-9]{3}\.[0-9]{3}|[0-9]{4}-[0-9]{2}"
+					name="cpf"
+					placeholder="Exemplos: 999.999.999-99(CPF) - 99.999.999 ou 9999-99(CNPJ)"/>
+			</div>
+			<div class="form-input">
+				<label for="type">Cidade</label>
+				<select name="type">
+					<option select value="blumenau">Blumenau</option>
+					<option value="pomerode">Pomerode</option>
+				</select>
+			</div>
+			<div class="form-input">
+				<label for="phone">Telefone</label>
+				<input required type="tel" value="+55-99999-9999"
+					pattern="\+[0-9]{2,}-[0-9]{5}-[0-9]{4}"
+					name="phone"
+					placeholder="Exemplo: +55-99999-9999"/>
+			</div>
+		</div>
+		<input class="form-btn" type="reset" value="Resetar" />
+		<input class="form-btn" type="submit" value="Salvar" />
+    </form>
+  </body>
+</html>
