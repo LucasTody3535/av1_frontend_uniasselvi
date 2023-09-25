@@ -65,10 +65,6 @@
 	#filter select {
 		width: 142px !important;
 	}
-
-	#table-filters button {
-		width: 100px !important;
-	}
 }
 
 @media only screen and (min-width: 667px) {
@@ -84,5 +80,9 @@
 	
 	#filter:nth-child(2) select {
 		margin-left: 0;
+	}
+
+	#table-filters button {
+		width: 200px !important;
 	}
 }
