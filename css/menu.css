@@ -25,9 +25,10 @@ nav p {
 	font-size: 20px;
 }
 
-nav p span {
+nav p:nth-child(1) {
 	color: white;
-	text-decoration: underline;
+	margin-left: 5px;
+	font-weight: bold;
 }
 
 nav a {
