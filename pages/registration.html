@@ -167,7 +167,39 @@
 		{
 			form {
 				height: calc(100vh - 40px);
-			}		
+			}
+
+			.form-btn {
+				width: 250px !important;
+			}
+
+			form #title {
+				left: 30px;
+				top: 20px;
+				font-size: 25px;
+			}
+		
+			form #form-fields .form-input {
+				width: 300px;
+			}
+			
+			form #form-fields {
+				margin-bottom: 30px;
+			}
+
+			.form-btn:first-of-type,
+			.form-btn:last-of-type {
+				position: absolute;
+				bottom: 0px;
+			}
+
+			.form-btn:first-of-type {
+				left: 10vw;
+			}
+
+			.form-btn:last-of-type {
+				right: 10vw;
+			}
 		}
 
 		@media only screen
